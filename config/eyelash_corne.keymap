@@ -115,33 +115,6 @@ ZMK_MACRO_ONE_PARAM(mod_tab_layer,
             bindings = <&mod_tab_layer LALT>;
         };
 
-        // Bracket/paren/brace combos: the 2 keys nearest the center gap on a
-        // given row, same pattern on both hands (row picks the bracket type).
-        combo_open_brace {
-            key-positions = <LT0 LT1>;
-            bindings = <&kp LBRC>;
-        };
-        combo_close_brace {
-            key-positions = <RT0 RT1>;
-            bindings = <&kp RBRC>;
-        };
-        combo_open_bracket {
-            key-positions = <LM0 LM1>;
-            bindings = <&kp LBKT>;
-        };
-        combo_close_bracket {
-            key-positions = <RM0 RM1>;
-            bindings = <&kp RBKT>;
-        };
-        combo_open_paren {
-            key-positions = <LB0 LB1>;
-            bindings = <&kp LPAR>;
-        };
-        combo_close_paren {
-            key-positions = <RB0 RB1>;
-            bindings = <&kp RPAR>;
-        };
-
         combo_caps_lock {
             key-positions = <LB5 RB5>;
             bindings = <&kp CAPS>;
@@ -161,7 +134,7 @@ ZMK_LAYER(base,
 &kp TAB   &kp Q       &kp W       &kp E        &kp R        &kp T                                  &kp UP                   &kp Y  &kp U         &kp I         &kp O        &kp P           &kp BSLH
 &kp ESC   &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G                        &kp LEFT  &kp ENTER  &kp RIGHT     &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
 &kp LSHFT &kp Z       &kp X       &kp C        &kp V        &kp B             &kp SPACE            &kp DOWN                 &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-                                  &thumb NAV BSPC &thumb SYS DEL &caps_word                                                 &mo MOUSE &thumb SYM RET &thumb NUM SPACE
+                                  &caps_word &thumb NAV SPACE &thumb SYS BSPC                                               &thumb SYM RET &thumb SYM DEL &thumb MOUSE ESC
 , &inc_dec_kp C_VOL_UP C_VOL_DN
 )
 
@@ -180,10 +153,10 @@ ZMK_LAYER(nav,
 )
 
 ZMK_LAYER(sys,
-___ &kp C_BRI_UP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &bt_0                               ___             &kp PAUSE_BREAK &kp F7 &kp F8 &kp F9 &kp F10 &bt_1
-___ &kp C_BRI_DN &kp C_PREV &kp C_PP     &kp C_NEXT   &kp PSCRN                    ___    ___    ___      &kp PSCRN       &kp F4 &kp F5 &kp F6 &kp F11 &bt_2
-___ &kp LGUI     &kp LALT   &kp LCTRL    &kp LSHFT    &bt_3                ___            ___             &kp SLCK        &kp F1 &kp F2 &kp F3 &kp F12 &bootloader
-                            ___ ___ &sys_reset                                                                  &studio_unlock ___ &rgb_ug RGB_TOG
+&bootloader    &kp C_BRI_UP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &sys_reset                  ___             &kp PAUSE_BREAK &kp F7 &kp F8 &kp F9 &kp F10 ___
+&studio_unlock &kp C_BRI_DN &kp C_PREV &kp C_PP     &kp C_NEXT   &kp PSCRN            ___    ___    ___      &kp PSCRN       &kp F4 &kp F5 &kp F6 &kp F11 ___
+___            &bt_0        &bt_1      &bt_2        &bt_3        &bt_3        ___            ___             &kp SLCK        &kp F1 &kp F2 &kp F3 &kp F12 ___
+                                              ___ ___ ___                                                           ___ ___ ___
 )
 
 ZMK_LAYER(symbol,
