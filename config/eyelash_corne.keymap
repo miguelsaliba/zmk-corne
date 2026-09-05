@@ -76,6 +76,8 @@ ZMK_HOLD_TAP(thumb,
     quick-tap-ms = <250>;
 )
 
+ZMK_TAP_DANCE(td_media, bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;)
+
 ZMK_TAP_DANCE(bt_0, bindings = <&bt_select_0>, <&bt BT_DISC 0>;)
 ZMK_TAP_DANCE(bt_1, bindings = <&bt_select_1>, <&bt BT_DISC 1>;)
 ZMK_TAP_DANCE(bt_2, bindings = <&bt_select_2>, <&bt BT_DISC 2>;)
@@ -129,11 +131,11 @@ ZMK_MACRO_ONE_PARAM(mod_tab_layer,
 //  LB5 LB4 LB3 LB2 LB1 LB0  LEC     JS4      RB0 RB1 RB2 RB3 RB4 RB5
 //          LH2 LH1 LH0                       RH0 RH1 RH2
 //
-// JS0-4 = joystick (arrow keys by default); LEC = scroller/encoder push (space)
+// JS0-4 = joystick; LEC = scroller/encoder push
 ZMK_LAYER(base,
 &kp TAB   &kp Q       &kp W       &kp E        &kp R        &kp T                          &kp UP                   &kp Y  &kp U         &kp I         &kp O        &kp P           &kp BSLH
 &kp ESC   &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G                &kp LEFT  &kp ENTER  &kp RIGHT     &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
-&kp LSHFT &kp Z       &kp X       &kp C        &kp V        &kp B     &kp SPACE            &kp DOWN                 &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
+&kp LSHFT &kp Z       &kp X       &kp C        &kp V        &kp B     &td_media            &kp DOWN                 &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
                       &caps_word &thumb NAV SPACE &thumb SYS BSPC                                                   &thumb SYM RET &thumb NUM DEL &thumb MOUSE ESC
 , &inc_dec_kp C_VOL_UP C_VOL_DN
 )
@@ -170,7 +172,7 @@ ZMK_LAYER(mouse,
 ___ ___            &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT ___                                         &mmv MOVE_UP                     ___      &mo MOUSESLOW &mo MOUSEFAST ___      ___      ___
 ___ &msc SCRL_UP   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp MB5                    &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT       &mkp MB5 &sk RSHFT     &sk RCTRL     &sk RALT &sk RGUI ___
 ___ &msc SCRL_DOWN &none          &mo MOUSESLOW  &mo MOUSEFAST   &mkp MB4       &mkp RCLK                    &mmv MOVE_DOWN                   &mkp MB4 &mkp LCLK     &mkp MCLK     &mkp RCLK ___     ___
-                                  &mkp LCLK &mkp MCLK &mkp RCLK                                                                                    ___ ___ ___
+                                  &mkp MCLK &mkp LCLK &mkp RCLK                                                                                    ___ ___ ___
 )
 
 ZMK_LAYER(mouse_slow,
