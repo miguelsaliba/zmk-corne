@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -100,29 +100,13 @@ ZMK_MACRO_ONE_PARAM(mod_tab_layer,
           <&macro_release &mo NAV>;
 )
 
-/ {
-    combos {
-        compatible = "zmk,combos";
+ZMK_COMBO(softoff, &soft_off, LT4 LM3 LB4)
 
-        softoff {
-            bindings = <&soft_off>;
-            key-positions = <1 15 29>;
-        };
+// Alt+Tab: hold both keys to keep NAV+Alt engaged (NAV layer has TAB
+// bound too, so you can keep tapping it while holding this combo down).
+ZMK_COMBO(alttab_cursor, &mod_tab_layer LALT, LH1 LH2)
 
-        // Alt+Tab: hold both keys to keep NAV+Alt engaged (NAV layer has TAB
-        // bound too, so you can keep tapping it while holding this combo down).
-        combo_alttab_cursor {
-            timeout-ms = <50>;
-            key-positions = <LH1 LH2>;
-            bindings = <&mod_tab_layer LALT>;
-        };
-
-        combo_caps_lock {
-            key-positions = <LB5 RB5>;
-            bindings = <&kp CAPS>;
-        };
-    };
-};
+ZMK_COMBO(caps_word, &caps_word, LB5 RB5)
 
 // Physical layout (see zmk-helpers/key-labels/eyelash42.h for the position map):
 //
@@ -148,9 +132,9 @@ ___ &kp GRAVE  &kp N1 &kp N2 &kp N3 &kp BSLH           ___               ___    
 )
 
 ZMK_LAYER(nav,
-&none     &kp LC(A) &kp SPACE &kp TAB   &kp BSPC  &none                                 ___              &kp LC(X)  &kp LS(TAB)  &kp LC(Z)  &kp LC(Y)  &kp TAB    &none
-&none     &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT &none                          ___    ___    ___       &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT  &kp LC(C)  &none
-&kp LC(L) &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(V))          ___            ___              &kp LC(V)  &kp HOME     &kp PG_UP  &kp PG_DN  &kp END    &kp LC(L)
+&none     &kp LC(A) &kp SPACE &kp TAB   &kp BSPC  &none                                 ___              &kp LC(X)  &kp LS(TAB)  &kp LC(Z)  &kp LC(Y)  &kp TAB   &none
+&none     &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT &none                          ___    ___    ___       &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT  &kp CAPS  &none
+&kp LC(L) &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(V))          ___            ___              &kp LC(V)  &kp HOME     &kp PG_UP  &kp PG_DN  &kp END   &kp LC(L)
                               ___ ___ ___                                                                   ___ ___ ___
 )
 
