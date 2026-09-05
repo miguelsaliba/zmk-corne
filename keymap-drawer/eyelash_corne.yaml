@@ -45,7 +45,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:alpha-w-box$$
   - {t: '$$mdi:keyboard-space$$', h: nav}
-  - {t: '$$mdi:keyboard-tab$$', h: sys}
+  - {t: '$$mdi:keyboard-tab$$', h: system}
   - {t: '$$mdi:keyboard-return$$', h: symbol}
   - {t: '$$mdi:backspace$$', h: number}
   - {t: '$$mdi:backspace-reverse-outline$$', h: mouse}
@@ -147,7 +147,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  sys:
+  system:
   - $$mdi:progress-download$$
   - $$mdi:brightness-5$$
   - $$mdi:volume-off$$
