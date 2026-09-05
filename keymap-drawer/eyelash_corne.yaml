@@ -125,7 +125,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - Ctl+C
+  - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+L
   - Ctl+Z
@@ -398,4 +398,4 @@ combos:
 - p: [43, 42]
   k: '&mod_tab_layer LALT'
 - p: [28, 41]
-  k: $$mdi:apple-keyboard-caps$$
+  k: $$mdi:alpha-w-box$$
