@@ -45,10 +45,10 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:alpha-w-box$$
   - {t: '$$mdi:keyboard-space$$', h: nav}
-  - {t: '$$mdi:backspace$$', h: sys}
+  - {t: '$$mdi:keyboard-tab$$', h: sys}
   - {t: '$$mdi:keyboard-return$$', h: symbol}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: number}
-  - {t: '$$mdi:keyboard-esc$$', h: mouse}
+  - {t: '$$mdi:backspace$$', h: number}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: mouse}
   number:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '[', s: '{'}
