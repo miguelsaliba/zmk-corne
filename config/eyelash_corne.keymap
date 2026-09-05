@@ -75,7 +75,7 @@ ZMK_HOLD_TAP(thumb,
 
 ZMK_TAP_DANCE(td_media,
     bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
-    tapping-term-ms = 1000;
+    tapping-term-ms = <1000>;
 )
 
 ZMK_TAP_DANCE(bt_0, bindings = <&bt_select_0>, <&bt BT_DISC 0>;)
