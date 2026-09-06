@@ -176,7 +176,7 @@ layers:
   - F6
   - F11
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:bluetooth-off$$
   - '&bt_0'
   - '&bt_1'
   - '&bt_2'
