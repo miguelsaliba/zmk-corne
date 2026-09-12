@@ -201,8 +201,29 @@ parse_config:
       tap: $$mdi:mouse-right-click-outline$$
     "&mkp MCLK":
       tap: $$mdi:mouse-scroll-wheel$$
+    # French diacritics (unicode mod-morphs, tap/shifted = lower/uppercase)
+    "&fr_a_grave": {tap: "à", shifted: "À"}
+    "&fr_a_circumflex": {tap: "â", shifted: "Â"}
+    "&fr_ae": {tap: "æ", shifted: "Æ"}
+    "&fr_c_cedilla": {tap: "ç", shifted: "Ç"}
+    "&fr_e_grave": {tap: "è", shifted: "È"}
+    "&fr_e_acute": {tap: "é", shifted: "É"}
+    "&fr_e_circumflex": {tap: "ê", shifted: "Ê"}
+    "&fr_e_diaeresis": {tap: "ë", shifted: "Ë"}
+    "&fr_i_circumflex": {tap: "î", shifted: "Î"}
+    "&fr_i_diaeresis": {tap: "ï", shifted: "Ï"}
+    "&fr_o_circumflex": {tap: "ô", shifted: "Ô"}
+    "&fr_oe": {tap: "œ", shifted: "Œ"}
+    "&fr_u_grave": {tap: "ù", shifted: "Ù"}
+    "&fr_u_circumflex": {tap: "û", shifted: "Û"}
+    "&fr_u_diaeresis": {tap: "ü", shifted: "Ü"}
+    "&fr_y_diaeresis": {tap: "ÿ", shifted: "Ÿ"}
+
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
+    "&caps_fre 6 0":
+      tap: $$mdi:alpha-w-box$$
+      hold: FRE
     "&kt RSHIFT":
       tap: $$mdi:apple-keyboard-shift$$
       hold: $$mdi:toggle-switch$$

@@ -10,8 +10,13 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
+// Unicode input method: 0 = Windows/WinCompose, 1 = Linux (ibus), 2 = macOS.
+// Must be defined *before* helper.h and the unicode-chars files.
+#define HOST_OS 1
+
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/eyelash42.h"
+#include "zmk-helpers/unicode-chars/french.dtsi"
 #include "labels.h"
 
 #define BASE 0
@@ -20,8 +25,9 @@
 #define SYS 3
 #define SYM 4
 #define MOUSE 5
-#define MOUSESLOW 6
-#define MOUSEFAST 7
+#define FRE 6
+#define MOUSESLOW 7
+#define MOUSEFAST 8
 
 #define ___ &trans
 
@@ -76,6 +82,15 @@ ZMK_HOLD_TAP(thumb,
     quick-tap-ms = <250>;
 )
 
+// Tap for caps word, hold for the French diacritics layer.
+// The second parameter is unused: &caps_word takes no parameters.
+ZMK_HOLD_TAP(caps_fre,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    bindings = <&mo>, <&caps_word>;
+    quick-tap-ms = <250>;
+)
+
 ZMK_TAP_DANCE(td_media,
     bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
     tapping-term-ms = <1000>;
@@ -123,7 +138,7 @@ ZMK_LAYER(base,
 &kp TAB   &kp Q       &kp W       &kp E        &kp R        &kp T                          &kp UP                   &kp Y  &kp U         &kp I         &kp O        &kp P           &kp BSLH
 &kp ESC   &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G                &kp LEFT  &kp ENTER  &kp RIGHT     &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
 &kp LSHFT &kp Z       &kp X       &kp C        &kp V        &kp B     &td_media            &kp DOWN                 &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-                      &caps_word &thumb NAV SPACE &thumb SYS TAB                                                   &thumb SYM RET &thumb NUM BSPC &thumb MOUSE DEL
+                      &caps_fre FRE 0 &thumb NAV SPACE &thumb SYS TAB                                              &thumb SYM RET &thumb NUM BSPC &thumb MOUSE DEL
 , &inc_dec_kp C_VOL_UP C_VOL_DN
 )
 
@@ -160,6 +175,14 @@ ___ ___            &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT ___            
 ___ &msc SCRL_UP   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp MB5                    &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT       &mkp MB5 &sk RSHFT     &sk RCTRL     &sk RALT &sk RGUI ___
 ___ &msc SCRL_DOWN &none          &mo MOUSESLOW  &mo MOUSEFAST   &mkp MB4       &mkp RCLK                    &mmv MOVE_DOWN                   &mkp MB4 &mkp LCLK     &mkp MCLK     &mkp RCLK ___     ___
                                   &mkp MCLK &mkp LCLK &mkp RCLK                                                                                    ___ ___ ___
+)
+
+// a-e-i-o-u-y, mostly
+ZMK_LAYER(french,
+___ ___ ___ ___ ___ ___                    ___               &fr_a_circumflex &fr_e_circumflex &fr_i_circumflex &fr_o_circumflex &fr_u_circumflex ___
+___ ___ ___ ___ ___ ___             ___    ___    ___        &fr_a_grave      &fr_e_grave      &fr_e_acute      &fr_c_cedilla    &fr_u_grave      &fr_y_diaeresis
+___ ___ ___ ___ ___ ___     ___            ___               &fr_ae           &fr_e_diaeresis  &fr_i_diaeresis  &fr_oe           &fr_u_diaeresis  ___
+            ___ ___ ___                                          ___ ___ ___
 )
 
 ZMK_LAYER(mouse_slow,
