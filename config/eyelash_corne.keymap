@@ -120,9 +120,9 @@ ZMK_MACRO_ONE_PARAM(mod_tab_layer,
 
 ZMK_COMBO(softoff, &soft_off, LT4 LM3 LB4)
 
-// Alt+Tab: hold both keys to keep NAV+Alt engaged (NAV layer has TAB
-// bound too, so you can keep tapping it while holding this combo down).
-ZMK_COMBO(alttab_cursor, &mod_tab_layer LALT, LH1 LH2)
+// // Alt+Tab: hold both keys to keep NAV+Alt engaged (NAV layer has TAB
+// // bound too, so you can keep tapping it while holding this combo down).
+// ZMK_COMBO(alttab_cursor, &mod_tab_layer LALT, LH1 LH2)
 
 ZMK_COMBO(caps_word, &caps_word, LB5 RB5)
 
