@@ -2,43 +2,43 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   base:
   - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - E
-  - R
-  - T
+  - B
+  - L
+  - D
+  - C
+  - V
   - $$mdi:arrow-up-bold$$
+  - J
   - Y
-  - U
-  - I
   - O
-  - P
+  - U
+  - {t: ;, s: ':'}
   - {t: \, s: '|'}
   - $$mdi:keyboard-esc$$
-  - {t: A, h: LGUI}
-  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: N, h: LGUI}
+  - {t: R, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: T, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
-  - H
-  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: RGUI, s: ':'}
+  - P
+  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: I, h: RGUI}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
-  - Z
   - X
-  - C
-  - V
-  - B
+  - Q
+  - M
+  - W
+  - Z
   - '&td_media'
   - $$mdi:arrow-down-bold$$
-  - N
-  - M
+  - K
+  - F
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
@@ -49,6 +49,55 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: symbol}
   - {t: '$$mdi:backspace$$', h: number}
   - {t: '$$mdi:backspace-reverse-outline$$', h: mouse}
+  qwerty:
+  - {type: trans}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - {type: trans}
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {type: trans}
+  - {type: trans}
+  - {t: A, h: LGUI}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - G
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - H
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ;, h: RGUI, s: ':'}
+  - {type: trans}
+  - {type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {type: trans}
+  - {type: trans}
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
   number:
   - {type: trans}
   - {t: '[', s: '{'}
@@ -446,3 +495,5 @@ combos:
   k: '&soft_off'
 - p: [28, 41]
   k: $$mdi:alpha-w-box$$
+- p: [0, 12]
+  k: {t: qwerty, h: toggle}
