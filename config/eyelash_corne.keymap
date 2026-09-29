@@ -140,9 +140,9 @@ ZMK_COMBO(qwerty_toggle, &tog QWERTY, LT5 RT5)
 //   n r t s g   p h a e i
 //   x q m w z   k f ' ; .
 ZMK_LAYER(base,
-&kp TAB   &kp B       &kp L       &kp D        &kp C        &kp V                          &kp UP                   &kp J  &kp Y         &kp O         &kp U       &kp SEMI    &kp BSLH
-&kp ESC   &hml LGUI N &hml LALT R &hml LCTRL T &hml LSHFT S &kp G                &kp LEFT  &kp ENTER  &kp RIGHT     &kp P  &hmr RSHFT H  &hmr RCTRL A  &hmr RALT E &hmr RGUI I  &kp SQT
-&kp LSHFT &kp X       &kp Q       &kp M        &kp W        &kp Z     &td_media            &kp DOWN                 &kp K  &kp F         &kp COMMA     &kp DOT     &kp FSLH     &kp RSHFT
+&kp TAB   &kp B       &kp L       &kp D        &kp C        &kp V                          &kp UP                   &kp J  &kp Y         &kp O         &kp U       &kp COMMA   &kp BSLH
+&kp ESC   &hml LGUI N &hml LALT R &hml LCTRL T &hml LSHFT S &kp G                &kp LEFT  &kp ENTER  &kp RIGHT     &kp P  &hmr RSHFT H  &hmr RCTRL A  &hmr RALT E &hmr RGUI I &kp FSLH
+&kp LSHFT &kp X       &kp Q       &kp M        &kp W        &kp Z     &td_media            &kp DOWN                 &kp K  &kp F         &kp SQT       &kp SEMI    &kp DOT     &kp RSHFT
                       &caps_fre FRE 0 &thumb NAV SPACE &thumb SYS TAB                                              &thumb SYM RET &thumb NUM BSPC &thumb MOUSE DEL
 , &inc_dec_kp C_VOL_UP C_VOL_DN
 )
@@ -151,7 +151,7 @@ ZMK_LAYER(base,
 // every other key is transparent so it keeps whatever BASE defines.
 ZMK_LAYER(qwerty,
 ___ &kp Q       &kp W       &kp E        &kp R        &kp T                    ___             &kp Y  &kp U         &kp I         &kp O        &kp P           ___
-___ &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G            ___     ___     ___     &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  ___
+___ &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G            ___     ___     ___     &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
 ___ &kp Z       &kp X       &kp C        &kp V        &kp B     ___            ___             &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        ___
                             ___ ___ ___                                                            ___ ___ ___
 )
