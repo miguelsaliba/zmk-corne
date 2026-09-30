@@ -142,7 +142,7 @@ ZMK_COMBO(qwerty_toggle, &tog QWERTY, LT5 RT5)
 ZMK_LAYER(base,
 &kp TAB   &kp B       &kp L       &kp D        &kp C        &kp V                          &kp UP                   &kp J  &kp Y         &kp O         &kp U       &kp COMMA   &kp BSLH
 &kp ESC   &hml LGUI N &hml LALT R &hml LCTRL T &hml LSHFT S &kp G                &kp LEFT  &kp ENTER  &kp RIGHT     &kp P  &hmr RSHFT H  &hmr RCTRL A  &hmr RALT E &hmr RGUI I &kp FSLH
-&kp LSHFT &kp X       &kp Q       &kp M        &kp W        &kp Z     &td_media            &kp DOWN                 &kp K  &kp F         &kp SQT       &kp SEMI    &kp DOT     &kp RSHFT
+&sk LSHFT &kp X       &kp Q       &kp M        &kp W        &kp Z     &td_media            &kp DOWN                 &kp K  &kp F         &kp SQT       &kp SEMI    &kp DOT     &sk RSHFT
                       &caps_fre FRE 0 &thumb NAV SPACE &thumb SYS TAB                                              &thumb SYM RET &thumb NUM BSPC &thumb MOUSE DEL
 , &inc_dec_kp C_VOL_UP C_VOL_DN
 )
@@ -175,6 +175,7 @@ ZMK_LAYER(system,
 &studio_unlock &kp C_BRI_DN &kp C_PREV &kp C_PP     &kp C_NEXT   &kp PSCRN             ___    ___    ___      &kp PSCRN       &kp F4 &kp F5 &kp F6 &kp F11 ___
 &bt BT_CLR     &bt_0        &bt_1      &bt_2        &bt_3        &out OUT_USB  ___            ___             &kp SLCK        &kp F1 &kp F2 &kp F3 &kp F12 ___
                                               ___ ___ ___                                                           ___ ___ ___
+, &inc_dec_kp C_BRI_UP C_BRI_DN
 )
 
 ZMK_LAYER(symbol,
