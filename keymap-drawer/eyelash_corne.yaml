@@ -21,7 +21,7 @@ layers:
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - $$mdi:arrow-left-bold$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:keyboard-space$$
   - $$mdi:arrow-right-bold$$
   - P
   - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
