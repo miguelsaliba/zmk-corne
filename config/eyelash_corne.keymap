@@ -141,7 +141,7 @@ ZMK_COMBO(qwerty_toggle, &tog QWERTY, LT5 RT5)
 //   x q m w z   k f ' ; .
 ZMK_LAYER(base,
 &kp TAB   &kp B       &kp L       &kp D        &kp C        &kp V                          &kp UP                   &kp J  &kp Y         &kp O         &kp U       &kp COMMA   &kp BSLH
-&kp ESC   &hml LGUI N &hml LALT R &hml LCTRL T &hml LSHFT S &kp G                &kp LEFT  &kp ENTER  &kp RIGHT     &kp P  &hmr RSHFT H  &hmr RCTRL A  &hmr RALT E &hmr RGUI I &kp FSLH
+&kp ESC   &hml LGUI N &hml LALT R &hml LCTRL T &hml LSHFT S &kp G                &kp LEFT  &kp SPACE  &kp RIGHT     &kp P  &hmr RSHFT H  &hmr RCTRL A  &hmr RALT E &hmr RGUI I &kp FSLH
 &sk LSHFT &kp X       &kp Q       &kp M        &kp W        &kp Z     &td_media            &kp DOWN                 &kp K  &kp F         &kp SQT       &kp SEMI    &kp DOT     &sk RSHFT
                       &caps_fre FRE 0 &thumb NAV SPACE &thumb SYS TAB                                              &thumb SYM RET &thumb NUM BSPC &thumb MOUSE DEL
 , &inc_dec_kp C_VOL_UP C_VOL_DN
